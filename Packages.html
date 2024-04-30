@@ -364,6 +364,27 @@ hr {
         </div><br>
           
             </div>
+    <div> <h1>Customizable Packages</h1>
+
+    <form action="{{ url_for('create') }}" method="post">
+        <label for="package_name">Package Name:</label>
+        <input type="text" name="package_name" id="package_name">
+
+        <label for="package_type">Package Type:</label>
+        <select name="package_type" id="package_type">
+            <option value="flights">Flights</option>
+            <option value="hotels">Hotels</option>
+            <option value="activities">Activities</option>
+        </select>
+
+        <button type="submit">Create Package</button>
+    </form>
+
+    <ul>
+        {% for package in packages %}
+            <li>{{ package.name }} ({{ package.type }}) <a href="{{ url_for('delete', package_index=packages.index(package)) }}">Delete</a></li>
+        {% endfor %}
+    </ul></div>
      
     
     <!--====footer=====-->
