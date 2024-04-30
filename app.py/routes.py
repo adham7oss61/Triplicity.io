@@ -2,7 +2,7 @@ app/routes.py: Google Maps route.                                               
 
 @app.route('/map')
 def map():
-    return render_template('map.html')                                                                 app/templates/map.html: Google Maps template.                                             <!DOCTYPE html>
+    return render_template('index.html')                                                                 app/templates/index.html: Google Maps template.                                             <!DOCTYPE html>
 <html>
   <head>
     <title>Google Maps</title>
