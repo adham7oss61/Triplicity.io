@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <title>Packages</title>
+    <link rel="stylesheet" href="Styles/stylepack.css">
+    <link rel="shortcut icon" href="Images/logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--====Poppins=font====-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--====fontAwesome-for-Icons====-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--====Link Swiper's CSS====-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    html {
+  overflow: auto;
+  text-decoration: none;
+}
+    body {
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+    }
+
+    .background-container {
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-image 0.5s ease;
+    }
+
+    .background-container.image1 {
+      background-image: url(Images/img1.jpg);
+      opacity: 0.70;
+    }
+
+    .background-container.image2 {
+      background-image: url(Images/img2.jpg);
+      opacity: 0.70;
+    }
+
+    .background-container.image3 {
+      background-image: url(Images/img3.jpg);
+      opacity: 0.70;
+    }
+
+    .background-container.image4 {
+      background-image: url(Images/img4.jpg);
+      opacity: 0.70;
+    }
+
+    .text-container {
+      text-align: center;
+      color: white;
+      opacity: 1;
+      font-weight: bolder;
+    }
+
+    h1 {
+      font-size: 65px;
+      font-weight: bolder;
+      opacity: 1;
+      font-style: normal;
+      font-family: 'Inter';
+      line-height: auto;
+      letter-spacing: 0;
+      resize: fixed;
+      text-align: left;
+      text-decoration: none;
+      margin-bottom: 20px;
+      color: #8F4C1D;
+      display: inline-block;
+    }
+
+    h1:after {
+    opacity: 1;
+    font-weight: bolder;
+      content: " lets you be in control of what you want.";
+      color: white;
+    }
+
+    .create-package {
+      background-color: #B69883;
+      opacity: 0.81;
+      padding: 15px 30px;
+      border-radius: 60px;
+      color: white;
+      text-decoration: none;
+      margin: 10px;
+    }
+
+    .view-packages {
+      background-color: #B69883;
+      opacity: 0.81;
+      padding: 15px 30px;
+      border-radius: 60px;
+      color: white;
+      text-decoration: none;
+      margin: 10px;
+    }
+
+    .arrow-button {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #0095ff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow-button:active {
+  background-color: #007bff;
+}
+
+.arrow-button:after {
+  content: ">";
+  font-size: 2em;
+}
+
+
+
+@keyframes holdToTravel {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes holdToTravelActive {
+  0% {
+    opacity: 1;
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(-10px, 10px) rotate(10deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0px, 0px) rotate(-10deg);
+  }
+  75% {
+    opacity: 1;
+    transform: translate(10px, -10px) rotate(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+#ruler1 {
+  border-radius: 50%;
+  border-color: #D39366;
+  fill: #D39366;
+}
+.image-container {
+display: flex; /* Use flexbox for side-by-side arrangement */
+align-items: center; /* Vertically align content */
+overflow: hidden; /* This hides overflowing image */
+}
+
+.image-container img {
+width: 1280px; /* Adjust image width as needed */
+height: 681px; /* Adjust image height as needed */
+border-radius: 33%; /* Create a circular image */
+padding: 100px;
+}
+
+.text-and-button {
+margin-left: 20px; /* Space between image and text */
+text-align: left; /* Left-align text content */
+padding: 21px; /* Optional: Add padding for spacing */
+background-color: white; /* Optional: Set background color */
+}
+
+.trip-design-btn {
+display: inline-block;
+padding: 10px 20px;
+border-radius: 5px; /* Adjust button corner radius if needed */
+background-color: #3498db;
+color: white;
+text-decoration: none;
+font-weight: bold;
+margin: 10px 0; /* Adjust button margin as needed */
+}
+
+.form-container {
+background-color: white;
+padding: 20px;
+border-radius: 5px;
+display: none;
+}
+
+.error-message {
+color: red;
+font-weight: bold;
+display: none;
+}
+
+/* Offer section styles (unchanged) */
+
+.offer-section {
+background-color: #B69883;
+padding: 20px;
+}
+
+.offer {
+color: orange;
+font-family: Times New Roman;
+font-size: 2.5em;
+line-height: 1.2;
+display: inline-block;
+margin-right: 20px;
+}
+
+.offer-box {
+background-color: rgba(182, 152, 131, 0.19);
+border: 1px solid #ccc;
+padding: 10px;
+width: 30%;
+margin: 0 10px;
+display: inline-block;
+vertical-align: top;
+}
+
+
+hr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  border: none;
+  border-top: 1px dashed #ddd;
+  width: 100%;
+  margin: 20px 0;
+}
+
+
+.icon-container {
+  display: inline-block; 
+}
+    </style>
+</head>
+<body>
+    
+    
+    <!--=====navigation======-->
+    <nav class="navigation">
+        <a href="index.html" class="nav--logo"><img src="Images/logo.png" alt="Triplicity"></a>
+    <!--===menu===-->
+    <ul class="menu">
+         <li><a href="index.html" >Home</a></li>
+         <li><a href="About Us.html" >About us</a></li>
+         <li><a href="Blogs.html">Blogs</a></li>
+         <li><a href="Partnerships.html">Partnership</a></li>
+         <li><a href="contact.html">Contact us</a></li>
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              What we offer
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Services.html">Services</a></li>
+              <li><a class="dropdown-item" href="Packages.html">Packages</a></li>
+            </ul>
+          </li>
+         
+    </ul>
+    <!--===account-btn-->
+    <a href="profile.html" class="account-btn">User Profile</a>
+
+    </nav><!--==nav-end==-->
+
+    <div class="background-container image1">
+        <div class="text-container">
+          <h1 class="triplicity-text">Triplicity</h1>
+          <a class="create-package" href="#">Create Package</a>
+          <a class="view-packages" href="#">View Packages</a>
+        </div>
+        <button class="arrow-button" onmousedown="changeImage()" onmouseup="resetImage()"> </button>
+        <span class="hold-to-travel">Hold to Travel</span>
+      </div>
+      <hr id="ruler1">
+      <hr id="ruler1">
+      <div class="image-container">
+        <img src="Images/dahab - Copy.jpg" alt="Dream Vacation Background">
+        <div class="text-and-button">
+          <h2>Not just any trip awaits.</h2>
+          <p>Be your own tailor. 
+            Craft your dream vacation with our customizable travel packages. 
+            Pick every detail, from flights and accommodations to activities and excursions, to create a memorable experience tailored to your interests and desires.</p>
+          <button class="trip-design-btn">Open Trip Design Form</button>
+          <div class="form-container" style="display: none;">
+            <h3>Design Your Dream Trip</h3>
+            <form id="trip-design-form">
+              <label for="destination">Desired Destination:</label>
+              <input type="text" id="destination" name="destination" placeholder="Where do you dream of going?" required="">
+              <span class="error-message"></span>
+              <button type="submit">Submit Your Design</button>
+            </form>
+          </div>
+        </div>
+      </div>
+        
+      
+      
+      
+      <div class="Desktop3" style="width: 1440px; height: 1024px; position: relative; background: white">
+        <div class="Rectangle4" style="width: 1440px; height: 1024px; left: 0px; top: 0px; position: absolute; background: rgba(182, 152, 131, 0.19)"></div>
+        <div class="WhatWeOffer" style="width: 133px; height: 197px; left: 61px; top: 419px; position: absolute"><span style="color: black; font-size: 48px; font-family: Inter; font-weight: 700; word-wrap: break-word">what we </span><span style="color: #D39366; font-size: 48px; font-family: Inter; font-weight: 700; word-wrap: break-word">offer</span></div>
+        <div class="Rectangle1" style="width: 379px; height: 394px; left: 225px; top: 270px; position: absolute; background: rgba(182, 152, 131, 0.19); border: 1px black solid"></div>
+        <div class="Rectangle2" style="width: 405px; height: 394px; left: 604px; top: 270px; position: absolute; background: rgba(182, 152, 131, 0.19); border: 1px black solid"></div>
+        <div class="2HiddenGemsWeCanGiveYouExperiencesNotEvenGoogleKnowsAbout" style="width: 252px; height: 290px; left: 720px; top: 334px; position: absolute"><span style="color: #D39366; font-size: 48px; font-family: Inter; font-weight: 300; word-wrap: break-word">.</span><span style="color: #D39366; font-size: 32px; font-family: Inter; font-weight: 300; word-wrap: break-word">2<br></span><span style="color: black; font-size: 24px; font-family: Inter; font-weight: 300; word-wrap: break-word">Hidden gems. we can give you experiences not even google knows about</span></div>
+        <div class="Rectangle3" style="width: 383px; height: 394px; left: 1009px; top: 270px; position: absolute; background: rgba(182, 152, 131, 0.19); border: 1px black solid"></div>
+        <div class="3EasyAndFastBooking" style="width: 252px; height: 290px; left: 1108px; top: 343px; position: absolute"><span style="color: #D39366; font-size: 32px; font-family: Inter; font-weight: 300; word-wrap: break-word">.3 <br></span><span style="color: black; font-size: 24px; font-family: Inter; font-weight: 300; word-wrap: break-word">Easy and fast booking. </span></div>
+        <div class="1BestValueForYouWeHaveThePerfectBalanceBetweenOurPricesAndServices" style="width: 252px; height: 290px; left: 285px; top: 318px; position: absolute"><span style="color: #D39366; font-size: 48px; font-family: Inter; font-weight: 300; word-wrap: break-word">.</span><span style="color: #D39366; font-size: 32px; font-family: Inter; font-weight: 300; word-wrap: break-word">1</span><span style="color: black; font-size: 24px; font-family: Inter; font-weight: 300; word-wrap: break-word"> <br>Best value for you. We have the perfect balance between our prices and services</span></div>
+        <img class="Ticket11" style="width: 68px; height: 58px; left: 1200px; top: 807px; position: absolute" src="Images/vp2.png">
+        <img class="Image2" style="width: 92px; height: 79px; left: 777px; top: 796px; position: absolute" src="Images/VP.png">
+        <img class="Image3" style="width: 83px; height: 79px; left: 328px; top: 796px; position: absolute" src="Images/ticket.png">
+        <div class="Triplicity" style="width: 668px; height: 216px; left: 900px; top: 916px; position: absolute; color: #D39366; font-size: 128px; font-family: Inter; font-weight: 700; word-wrap: break-word">Triplicity</div>
+      </div>
+      <div class="Desktop4" style="width: 1440px; height: 1024px; position: relative; background: white">
+        <div class="Photo" style="width: 838px; height: 207px; left: -143px; top: 50px; position: absolute; background: rgba(182, 152, 131, 0.19)"></div>
+        <div class="ChooseFromOurReadyToGoPackages" style="width: 581px; height: 157px; left: 61px; top: 108px; position: absolute"><span style="color: black; font-size: 48px; font-family: Inter; font-weight: 700; word-wrap: break-word">Choose from our ready to go </span><span style="color: #D39366; font-size: 48px; font-family: Inter; font-weight: 700; word-wrap: break-word">packages</span></div>
+        <div class="NeverStopExploring" style="width: 659px; height: 123px; left: 61px; top: 64px; position: absolute; color: black; font-size: 32px; font-family: Inter; font-weight: 300; word-wrap: break-word">Never stop exploring...</div>
+        <div class="Rectangle5" style="width: 550px; height: 607px; left: 781px; top: 312px; position: absolute; border: 1px black solid;">
+          <img src="Images/img4.jpg" alt="Image description" style="width: 550px; height: 249px; left: 122px; top: 316px;">
+          <span style="color: black; font-size: 30px; font-family: Inter; font-weight: 300; word-wrap: break-word">The Classic Explorer<br>     7days                              15 max   </span>
+          <p style="color: black; font-size: 24px; font-family: Inter; font-weight: 300; word-wrap: break-word; margin-top: 20px;">Activities: Visit the Pyramids of Giza and the Sphinx, Sail the Nile River on a traditional felucca boat and witness the Temple of Luxor and Karnak, Hot Air Balloon....</p>
+          <a href="#" text-decoration:="none">read more</a>
+          <button class="Reserve" style="width: 176px; height: 35px; bottom: 20px; margin-left:320px; background: rgba(76.80, 147.72, 230.97, 0.60); border-radius: 30px; font-size: 24px; font-family: Inter; font-weight: 600; word-wrap: break-word">Reserve</button>
+    
+        </div>
+        <div class="Arrow4" style="width: 44px; height: 0px; left: 1357px; top: 638px; position: absolute; border: 2px black solid"></div>
+        <div class="Arrow5" style="width: 44px; height: 0px; left: 40px; top: 625px; position: absolute; border: 2px black solid"></div>
+          <div class="Rectangle5" style="width: 550px; height: 607px; left: 187px; top: 312px; position: absolute; border: 1px black solid;">
+          <img src="Images/dahab - Copy.jpg" alt="Image description" style="width: 550px; height: 249px; left: 122px; top: 316px;">
+          <span style="color: black; font-size: 30px; font-family: Inter; font-weight: 300; word-wrap: break-word">The Classic Explorer<br>     7days                              15 max   </span>
+          <p style="color: black; font-size: 24px; font-family: Inter; font-weight: 300; word-wrap: break-word; margin-top: 20px;">Activities: Visit the Pyramids of Giza and the Sphinx, Sail the Nile River on a traditional felucca boat and witness the Temple of Luxor and Karnak, Hot Air Balloon....</p>
+          <a href="#" text-decoration:="none">read more</a>
+          <button class="Reserve" style="width: 176px; height: 35px; bottom: 20px; margin-left:320px; background: rgba(76.80, 147.72, 230.97, 0.60); border-radius: 30px; font-size: 24px; font-family: Inter; font-weight: 600; word-wrap: break-word">Reserve</button>
+    
+        </div><br>
+          
+            </div>
+     
+    
+    <!--====footer=====-->
+    <footer>
+        <div class="footer-container">
+            <!--==box==-->
+            <div class="footer-box">
+                    <img src="Images/logo.png" alt="footer Logo">
+               <br/>
+                <!--===social===-->
+                <div class="footer-social">
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div><!--==box-end==-->
+
+            <div class="footer-box">
+                <strong>Links</strong>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Packages</a></li>
+                    <li><a href="#">Partnership</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <strong>Contact</strong>
+                <span><i class="fas fa-map-marker-alt"></i>Egypt, Cairo, Alex</span>
+                <span><i class="far fa-envelope"></i>Triplicity@gmail.com</span>
+                <span><i class="fas fa-phone-square-alt"></i>0123456789</span>
+            </div>
+        </div>
+    </footer>
+
+    <!--===copyright===-->
+    <span class="copyright">Triplicity 2023 - All Copyright Reserved</span>
+
+ <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js.js" type="text/javascript"></script>
+  <script>
+    const button = document.querySelector(".arrow-button");
+    const backgroundContainer = document.querySelector(".background-container");
+    let currentImage = 1;
+    let isHolding = true;
+
+    function changeImage() {
+      isHolding = true;
+      currentImage++;
+      if (currentImage > 4) currentImage = 1;
+
+      backgroundContainer.classList.remove("image1", "image2", "image3", "image4");
+      backgroundContainer.classList.add(`image${currentImage}`);
+    }
+
+function resetImage() {
+  isHolding = false;
+}
+
+document.addEventListener("mouseup", () => {
+  resetImage();
+});
+const tripDesignBtn = document.querySelector('.trip-design-btn');
+const formContainer = document.querySelector('.form-container');
+const tripDesignForm = document.getElementById('trip-design-form');
+const errorMessage = document.querySelector('.error-message');
+
+tripDesignBtn.addEventListener('click', () => {
+  formContainer.style.display = 'block'; 
+});
+
+tripDesignForm.addEventListener('submit', (event) => {
+  event.preventDefault(); 
+
+  const destination = document.getElementById('destination').value;
+  let isValid = true;
+
+  
+  errorMessage.textContent = '';
+  errorMessage.style.display = 'none';
+
+
+  if (!destination) {
+    isValid = false;
+    errorMessage.textContent = 'Please enter your desired destination.';
+  }
+
+
+  if (isValid) {
+    console.log("Form submitted! Destination:", destination);
+   
+    alert("Your trip design request for " + destination + " has been submitted!");
+  } else {
+   
+    errorMessage.style.display = 'block';
+  }
+});
+const reserveButton = document.querySelector('.Reserve');
+
+reserveButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+
+
+
+</script>
+  
+</body>
+</html>
